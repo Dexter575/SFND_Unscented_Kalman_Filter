@@ -138,5 +138,4 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr Tools::loadPcd(std::string file)
   //std::cerr << "Loaded " << cloud->points.size () << " data points from "+file << std::endl;
 
   return cloud;
-}
-
+};

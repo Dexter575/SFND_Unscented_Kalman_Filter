@@ -4,7 +4,8 @@
 #include "Eigen/Dense"
 #include "measurement_package.h"
 
-class UKF {
+class UKF
+{
  public:
   /**
    * Constructor
@@ -50,6 +51,19 @@ class UKF {
 
   // if this is false, radar measurements will be ignored (except for init)
   bool use_radar_;
+  
+  //  Additional Parameters
+  // 1. Radar measurement noise covariance matrix
+  Eigen::MatrixXd R_radar_;
+
+  // 2. Lidar measurement noise covariance matrix
+  Eigen::MatrixXd R_lidar_;
+
+  // 3. Crrent NIS for radar
+  double NIS_radar_;
+
+  // 4. Current NIS for laser
+  double NIS_laser_;
 
   // state vector: [pos1 pos2 vel_abs yaw_angle yaw_rate] in SI units and rad
   Eigen::VectorXd x_;

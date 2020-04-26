@@ -25,7 +25,7 @@ int main(int argc, char** argv)
 	int frame_count = 0;
 	int time_us = 0;
 
-	double egoVelocity = 25;
+	double egoVelocity = 50;
 
 	while (frame_count < (frame_per_sec*sec_interval))
 	{
